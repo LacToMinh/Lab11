@@ -8,7 +8,21 @@
 
   <ItemGroup>
     <Folder Include="Areas\" />
-    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.25">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ASC.Business\ASC.Business.csproj" />
+    <ProjectReference Include="..\ASC.DataAccess\ASC.DataAccess.csproj" />
+    <ProjectReference Include="..\ASC.Model\ASC.Model.csproj" />
+    <ProjectReference Include="..\ASC.Utilities\ASC.Utilities.csproj" />
   </ItemGroup>
 
 </Project>
