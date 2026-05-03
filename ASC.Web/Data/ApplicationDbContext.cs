@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ASC.Model.Models;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace ASC.Web.Data
 {
@@ -18,7 +14,7 @@ namespace ASC.Web.Data
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
-      Database.Migrate();
+      //Database.Migrate();
     }
 
     protected override void OnModelCreating(ModelBuilder builder)

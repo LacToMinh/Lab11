@@ -45,19 +45,19 @@ namespace ASC.DataAccess
     public async Task<T> FindAsync(string partitionKey, string rowKey)
     {
       var result = await dbContext.Set<T>().FindAsync(partitionKey, rowKey);
-      return result;
+      return result  as T;
     }
 
     public async Task<IEnumerable<T>> FindAllByPartitionKeyAsync(string partitionKey)
     {
       var result = await dbContext.Set<T>().Where(t => t.PartitionKey == partitionKey).ToListAsync();
-      return result;
+      return result  as IEnumerable<T>;
     }
 
     public async Task<IEnumerable<T>> FindAllAsync()
     {
       var result = await dbContext.Set<T>().ToListAsync();
-      return result;
+      return result as IEnumerable<T>;
     }
   }
 }
